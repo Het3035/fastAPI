@@ -14,6 +14,6 @@ def About():
     return {'message':'This is About Page'}
 
 #User Route
-@app.get('/users')
-def User():
-    return {'users':['Het','Xyz','Pqr']}
+@app.get('/users/{user_id}')
+def get_users(user_id:int):
+    return {"user ID":user_id}
